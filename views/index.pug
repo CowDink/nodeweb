@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+    
+    div.jumbotron
+        h1 Halo, Bro!
+        p.
+            jadi gini... ini page cuma
+            buat belajar nodejs dan ya gitulah...
+            mantap kan wkwk..
+        a(href="/more", role="button").btn.btn-primary.btn-lg learn more!
+
+    h1 Kata Mutiara
+    - kamut.forEach((k) => {
+        blockquote
+            h4= k.judul
+            p= k.isi
+            footer= k.penulis
+    - });
+    a(href="/insert/kata_mutiara", role="button").btn.btn-info Masukan kata mutiara

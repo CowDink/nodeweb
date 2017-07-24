@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/style.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        script(src="/js/script.js")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    body
+        nav.navbar.navbar-inverse.navbar-fixed-top
+            div.container
+                div.navbar-header
+                    a(href="/").navbar-brand Home
+                    button(type="button", data-toggle="collapse", data-target="#myNav").navbar-toggle
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                div#myNav.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/puisi")  Puisi
+                        li
+                            a(href="/cerita")  Cerita
+                        li
+                            a(href="/pesan")  Pesan
+                    form.navbar-form.navbar-right
+                        div.input-group
+                            input(type="search", placeholder="Search...").form-control
+                            div.input-group-btn
+                                button(type="submit").btn.btn-default
+                                    i.glyphicon.glyphicon-search
+        div(style="margin:70px auto 35px auto").container
+            block content
+        div#footer.nav.navbar-inverse.navbar-fixed-bottom
+            div.container
+                footer Copyright &copy; 2017
